@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NPV TUNNEL</title>
+    <title>APP SHOPDATA</title>
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,21 +45,14 @@
 </head>
 <body class="main-bg text-gray-800">
     <div class="container mx-auto px-4 py-10">
-        <h1 class="text-3xl font-semibold text-center text-gray-900 mb-6"><b>HƯỚNG DẪN SỬ DỤNG NPV TUNNEL</b></h1>
+        <h1 class="text-3xl font-semibold text-center text-gray-900 mb-6"><b>HƯỚNG DẪN SỬ DỤNG APP SHOPDATA</b></h1>
 
         <!-- Đăng ký gói VPN -->
         <section class="mb-10">
             <h2 class="text-2xl font-medium text-gray-900 mb-4"><b>🎯BƯỚC 1: MUA GÓI VÀ LƯU Ý</b></h2>
             <div class="card rounded-lg p-5">
-                <p class="mb-4">🌏 Truy cập <a href="https://sieuvpn.pro.vn" class="text-blue-600 hover:underline" target="_blank">SIEUVPN.PRO.VN</a> để chọn gói cước dành cho app <b>NPV Tunnel</b> và Thanh toán</p>
-                <p class="mb-4">🆘 Mặc định <b>IOS không có thông báo</b> khi kết nối VPN. Nếu Sim không có Data gốc làm như sau:</p>
-                <p class="mb-4">👉<b>Viettel</b>: Đổi điểm <b>Viettel++</b> gói tháng trong App MyViettel</p>
-                <p class="mb-4">👉<b>VinaPhone</b>: Vào App <b>Momo</b> chọn mục <b>Data 4G/5G</b> => <b>Thẻ Data</b> => Chọn Tab <b>VinaPhone</b> => Chọn ô <b>1.500đ/50MB</b> => <b>Mua Ngay</b> => <b>Nạp</b> (Sẽ tự động nhảy qua tin nhắn SMS rồi bấm gửi)</p>
-                <p class="mb-4">👉<b>MobiFone</b>: Đang cập nhật</p>
-                <p class="mb-4">🆘 Mỗi thiết bị chỉ có 1 ID. Mọi người lưu ý khi được cấp Key File:</p>
-                <p class="mb-4">👉1 Key chỉ thêm được trên chính ID thiết bị vừa gửi (Thêm xong xóa đi thêm lại cũng sẽ không được). Gói 2 thiết bị sẽ được cấp 2 Key khi khách muốn dùng thêm 1 thiết bị nữa</p>
-                <p class="mb-4">👉Nếu ID thiết bị xin cấp lại Key mà là 1 ID khác ( Ví dụ như reset máy hay nâng OS...) sẽ không hỗ trợ cấp Key lại. Mua gói mới sẽ được hỗ trợ cấp Key mới</p>
-                <p class="mb-4">👉Chỉ hỗ trợ Key trên chính thiết bị đã gửi trước đó. Nếu đổi thiết bị khác vui lòng mua gói mới khác xong gửi ID để được cấp Key</p>
+                <p class="mb-4">🌏 Truy cập <a href="https://sieuvpn.pro.vn" class="text-blue-600 hover:underline" target="_blank">SIEUVPN.PRO.VN</a> để chọn gói cước dành cho App <b>SHOPDATA</b> và Thanh toán</p>
+                <p class="mb-4">🆘 App <b>SHOPDATA</b> full thông báo trên IOS không cần Data gốc</p>
             </div>
         </section>
 
@@ -67,12 +60,12 @@
         <section class="mb-10">
             <h2 class="text-2xl font-medium text-gray-900 mb-4"><b>🎯BƯỚC 2: ĐĂNG KÝ NỀN TIKTOK</b></h2>
             <div class="card rounded-lg p-5">
-                <!-- Provider Buttons -->
-                <div class="flex space-x-4 mb-4">
-                    <button class="provider-btn px-4 py-2 bg-gray-200 rounded-lg active" onclick="showProvider('viettel')"><b>Viettel</b></button>
-                    <button class="provider-btn px-4 py-2 bg-gray-200 rounded-lg" onclick="showProvider('vinaphone')"><b>Vina</b></button>
-                    <button class="provider-btn px-4 py-2 bg-gray-200 rounded-lg" onclick="showProvider('mobifone')"><b>Mobi</b></button>
-                </div>
+            <!-- Provider Buttons -->
+            <div class="flex space-x-4 mb-4">
+                <button class="provider-btn px-4 py-2 bg-gray-200 rounded-lg active" onclick="showProvider('viettel')"><b>Viettel</b></button>
+                <button class="provider-btn px-4 py-2 bg-gray-200 rounded-lg" onclick="showProvider('vinaphone')"><b>Vina</b></button>
+                <button class="provider-btn px-4 py-2 bg-gray-200 rounded-lg" onclick="showProvider('mobifone')"><b>Mobi</b></button>
+            </div>
 
                 <!-- Viettel Packages (Default) -->
                 <div id="viettel" class="provider-content">
@@ -83,7 +76,7 @@
                         <li>Gói Tháng: <b>T50K</b> gửi <b>191</b> (50.000đ/50GB/Tháng)</li>
                         <li>Gói MXH: <b>MXH100</b> gửi <b>191</b> (100.000đ/1GB/Ngày Data chính thống + 50GB nền TikTok tốc độ cao + không giới hạn nền TikTok tốc độ thường 4Mbps)</li>
                     </ul>
-                    <p class="mb-4">👉Link hướng dẫn đăng ký gói Tiktok Viettel 30k/Tháng: <a href="https://vanquy7.github.io/index2.html" class="text-blue-600 hover:underline" target="_blank">Bấm vào đây</a></p>
+                    <p class="mb-4">👉Link hướng dẫn đăng ký gói Tiktok Viettel 30k/Tháng: <a href="https://sieuvpn.io.vn/app/index-hd-dk-tiktok-viettel-30K.html" class="text-blue-600 hover:underline" target="_blank">Bấm vào đây</a></p>
                 </div>
 
                 <!-- Vinaphone Packages -->
@@ -113,21 +106,23 @@
 
         <!-- Hướng dẫn sử dụng cơ bản -->
         <section class="mb-10">
-            <h2 class="text-2xl font-medium text-gray-900 mb-4"><b>🎯BƯỚC CUỐI: HƯỚNG DẪN SETUP</b></h2>
+            <h2 class="text-2xl font-medium text-gray-900 mb-4"><b>🎯BƯỚC 3: HƯỚNG DẪN TẢI APP SHOPDATA</b></h2>
             <div class="card rounded-lg p-5">
                 <ol class="list-decimal pl-6 mb-4">
-                    <li>Tải và cài đặt <b>NPV Tunnel</b> từ <b>Appstore</b> hoặc <b>CHPlay</b></li>
-                    <li>👉Sau khi mua gói xong mọi người vào app chọn tab <b>“More”</b> => <b>“Device ID”</b> => copy đoạn ID gửi cho Admin để được cho phép sử dụng trên thiết bị của khách</li>
-                    <li>👉Sau đó Admin sẽ gửi cho 1 mã key => Chọn tab <b>“Configs”</b> => bấm dấu <b>“+”</b> => Chọn <b>“Import cloud config”</b> => Dán key đó vào ô rồi bấm nút <b>“Import cloud config”</b> => Bấm chọn vào máy chủ vừa thêm rồi quay sang tab <b>“Home”</b> bấm kết nối là dùng</li>
+                    <li>Tải và cài đặt App <b>SHOPDATA</b></li>
+                    <p class="mb-4">🌏 Link tải App: <a href="./vanquy7.github.io/index2.html" class="text-blue-600 hover:underline" target="_blank">Bấm vào đây</a></p>
+                    <div class="grid grid-cols-2 gap-4">
+                    <div class="flex flex-col items-center">
+                        <img src="TF.JPG" class="guide-img rounded-lg shadow-sm">
+                        <p class="text-center mt-2 text-sm">🆘 Tải App TestFlight trước khi cài App SHOPDATA</p>
+                        </div>
+                    <div class="flex flex-col items-center">
+                        <img src="S5.JPG" class="guide-img rounded-lg shadow-sm">
+                        <p class="text-center mt-2 text-sm">Cài đặt App SHOPDATA</p>
                 </ol>
                 <div class="grid grid-cols-2 gap-4">
                     <div class="flex flex-col items-center">
-                        <img src="IMG_2864.JPG" alt="Kết nối VPN NPV Tunnel" class="guide-img rounded-lg shadow-sm">
-                        <p class="text-center mt-2 text-sm">Ảnh 1: Copy Device ID</p>
-                        </div>
-                    <div class="flex flex-col items-center">
-                        <img src="NPV2.JPG" alt="Kết nối VPN NPV Tunnel" class="guide-img rounded-lg shadow-sm">
-                        <p class="text-center mt-2 text-sm">Ảnh 2: Dán Key</p>
+
                     </div>
                 </div>
             </div>
@@ -135,25 +130,25 @@
 
         <!-- Chặn quảng cáo và mở chặn Zalo (chỉ cho Android) -->
         <section class="mb-10">
-                <h2 class="text-2xl font-medium text-gray-900 mb-4"><b>🎯CHẶN QUẢNG CÁO TRONG APP VÀ MỞ CHẶN ZALO TRÊN ANDROID</b> </h2>
+                <h2 class="text-2xl font-medium text-gray-900 mb-4"><b>🎯BƯỚC CUỐI: HƯỚNG DẪN SỬ DỤNG APP SHOPDATA</b> </h2>
             <div class="card rounded-lg p-5">
-                <p class="mb-4"><b>👉NPV Tunnel</b> trên Android chứa quảng cáo, sử dụng các bước sau để chặn quảng cáo và mở chặn Zalo. Nếu sử dụng App SHOPDATA thì không cần DNS vì sẽ gây lỗi kết nối:</p>
+                <p class="mb-4">👉Sau khi mua gói dành riêng app SHOPDATA vui lòng làm theo hướng dẫn sau:</p>
                 <div class="grid grid-cols-2 gap-4">
                     <div class="flex flex-col items-center">
-                        <img src="IMG_2872.JPG" alt="Tắt Sniffing" class="guide-img rounded-lg shadow-sm">
-                        <p class="text-center mt-2 text-sm">IOS và Android bỏ tích 3 ô như ảnh</p>
+                        <img src="S1.JPG" class="guide-img rounded-lg shadow-sm">
+                        <p class="text-center mt-2 text-sm"><b>Bước 1: Đăng Nhập</b></p>
                     </div>
                     <div class="flex flex-col items-center">
-                        <img src="NPVQC1.JPG" alt="Cài đặt, kết nối khác" class="guide-img rounded-lg shadow-sm">
-                        <p class="text-center mt-2 text-sm">Tùy chon kết nối</p>
+                        <img src="S2.JPG" class="guide-img rounded-lg shadow-sm">
+                        <p class="text-center mt-2 text-sm"><b>Bước 2:</b> Chuyển qua tab <b>Trang Chủ</b> chọn <b>Máy chủ</b></p>
                     </div>
                     <div class="flex flex-col items-center">
-                        <img src="NPVQC2.JPG" alt="DNS riêng tư" class="guide-img rounded-lg shadow-sm">
-                        <p class="text-center mt-2 text-sm">DNS riêng tư/Cá nhân</p>
+                        <img src="S3.JPG" class="guide-img rounded-lg shadow-sm">
+                        <p class="text-center mt-2 text-sm"><b>Bước 3:</b> Kết Nối. Mặc định ô <b>Chọn Mạng Kết Nối</b> để <b>Mặc Định</b>, mọi người có thể bấm vào chọn các Host TikTok khác từ 1 đến 15 theo nhu cầu</p>
                     </div>
                     <div class="flex flex-col items-center">
-                        <img src="NPVQC3.JPG" alt="Thủ công và điền như hình" class="guide-img rounded-lg shadow-sm">
-                        <p class="text-center mt-2 text-sm">Thủ công và điền như hình</p>
+                        <img src="S4.JPG" class="guide-img rounded-lg shadow-sm">
+                        <p class="text-center mt-2 text-sm">👉Có <b>15 Host TikTok</b> mọi người tùy chọn nhé</p>
                     </div>
                 </div>
             </div>
