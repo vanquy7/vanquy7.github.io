@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPV TUNNEL</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --font-family: 'Poppins', sans-serif;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .main-bg {
+            background-color: #92C5FF;
+            min-height: 100vh;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .guide-img {
+            max-width: 150px;
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            .guide-img {
+                max-width: 200px;
+            }
+        }
+        .provider-btn {
+            transition: background-color 0.3s;
+        }
+        .provider-btn.active {
+            background-color: #2563eb;
+            color: white;
+        }
+    </style>
+</head>
+<body class="main-bg text-gray-800">
+    <div class="container mx-auto px-4 py-10">
+        <h1 class="text-3xl font-semibold text-center text-gray-900 mb-6"><b>HƯỚNG DẪN SỬ DỤNG NPV TUNNEL</b></h1>
+
+        <!-- Đăng ký gói VPN -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-medium text-gray-900 mb-4"><b>🎯BƯỚC 1: MUA GÓI VÀ LƯU Ý</b></h2>
+            <div class="card rounded-lg p-5">
+                <p class="mb-4">🌏 Truy cập <a href="https://sieuvpn.pro.vn" class="text-blue-600 hover:underline" target="_blank">SIEUVPN.PRO.VN</a> để chọn gói cước dành cho app <b>NPV Tunnel</b> và Thanh toán</p>
+                <p class="mb-4">🆘 Mặc định <b>IOS không có thông báo</b> khi kết nối VPN. Nếu Sim không có Data gốc làm như sau:</p>
+                <p class="mb-4">👉<b>Viettel</b>: Đổi điểm <b>Viettel++</b> gói tháng trong App MyViettel</p>
+                <p class="mb-4">👉<b>VinaPhone</b>: Vào App <b>Momo</b> chọn mục <b>Data 4G/5G</b> => <b>Thẻ Data</b> => Chọn Tab <b>VinaPhone</b> => Chọn ô <b>1.500đ/50MB</b> => <b>Mua Ngay</b> => <b>Nạp</b> (Sẽ tự động nhảy qua tin nhắn SMS rồi bấm gửi)</p>
+                <p class="mb-4">👉<b>MobiFone</b>: Đang cập nhật</p>
+                <p class="mb-4">🆘 Mỗi thiết bị chỉ có 1 ID. Mọi người lưu ý khi được cấp Key File:</p>
+                <p class="mb-4">👉1 Key chỉ thêm được trên chính ID thiết bị vừa gửi (Thêm xong xóa đi thêm lại cũng sẽ không được). Gói 2 thiết bị sẽ được cấp 2 Key khi khách muốn dùng thêm 1 thiết bị nữa</p>
+                <p class="mb-4">👉Nếu ID thiết bị xin cấp lại Key mà là 1 ID khác ( Ví dụ như reset máy hay nâng OS...) sẽ không hỗ trợ cấp Key lại. Mua gói mới sẽ được hỗ trợ cấp Key mới</p>
+                <p class="mb-4">👉Chỉ hỗ trợ Key trên chính thiết bị đã gửi trước đó. Nếu đổi thiết bị khác vui lòng mua gói mới khác xong gửi ID để được cấp Key</p>
+            </div>
+        </section>
+
+        <!-- Đăng ký nền TikTok -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-medium text-gray-900 mb-4"><b>🎯BƯỚC 2: ĐĂNG KÝ NỀN TIKTOK</b></h2>
+            <div class="card rounded-lg p-5">
+                <!-- Provider Buttons -->
+                <div class="flex space-x-4 mb-4">
+                    <button class="provider-btn px-4 py-2 bg-gray-200 rounded-lg active" onclick="showProvider('viettel')"><b>Viettel</b></button>
+                    <button class="provider-btn px-4 py-2 bg-gray-200 rounded-lg" onclick="showProvider('vinaphone')"><b>Vina</b></button>
+                    <button class="provider-btn px-4 py-2 bg-gray-200 rounded-lg" onclick="showProvider('mobifone')"><b>Mobi</b></button>
+                </div>
+
+                <!-- Viettel Packages (Default) -->
+                <div id="viettel" class="provider-content">
+                    <p class="mb-4">Áp dụng cho SIM Viettel, đăng ký bằng cách soạn tin nhắn gửi 191:</p>
+                    <ul class="list-disc pl-6 mb-4">
+                        <li>Gói Ngày: <b>T5K</b> gửi <b>191</b> (5.000đ/15GB/Ngày)</li>
+                        <li>Gói Tuần: <b>T15KN</b> gửi <b>191</b> (15.000đ/25GB/Tuần)</li>
+                        <li>Gói Tháng: <b>T50K</b> gửi <b>191</b> (50.000đ/50GB/Tháng)</li>
+                        <li>Gói MXH: <b>MXH100</b> gửi <b>191</b> (100.000đ/1GB/Ngày Data chính thống + 50GB nền TikTok tốc độ cao + không giới hạn nền TikTok tốc độ thường 4Mbps)</li>
+                    </ul>
+                    <p class="mb-4">👉Link hướng dẫn đăng ký gói Tiktok Viettel 30k/Tháng: <a href="https://sieuvpn.io.vn/app/index-hd-dk-tiktok-viettel-30K.html" class="text-blue-600 hover:underline" target="_blank">Bấm vào đây</a></p>
+                </div>
+
+                <!-- Vinaphone Packages -->
+                <div id="vinaphone" class="provider-content hidden">
+                    <p class="mb-4">Áp dụng cho SIM Vinaphone, đăng ký bằng cách soạn tin nhắn gửi 888:</p>
+                    <ul class="list-disc pl-6 mb-4">
+                        <li>Gói Ngày : <b>TK1</b> gửi <b>888</b> (3k/Ngày/Không giới hạn tốc độ cao)</li>
+                        <li>Gói Tuần : <b>TK7</b> gửi <b>888</b> (10k/Tuần/Không giới hạn tốc độ cao)</li>
+                        <li>Gói Tháng loại 1 : <b>TK30</b> gửi <b>888</b> (30k/Tháng/Không giới hạn tốc độ cao)</li>
+                        <li>Gói Tháng loại 2: <b>TK50G</b> gửi <b>888</b> (50k/Tháng/Không giới hạn tốc độc cao - Có thêm 2Gb/Tháng Data gốc theo gói)</li>
+                        
+                    </ul>
+                    
+                </div>
+
+                <!-- Mobifone Packages -->
+                <div id="mobifone" class="provider-content hidden">
+                    <p class="mb-4">Áp dụng cho SIM Mobifone, đăng ký bằng cách soạn tin nhắn gửi 9084</p>
+                    <ul class="list-disc pl-6 mb-4">
+                        <li>Gói Tháng: <b>DK TIK30</b> gửi <b>9084</b> (50.000đ/50GB/Tháng)</li>
+                        <li>Gói Tháng: <b>TT80</b> gửi <b>9084</b> (80.000đ/Tháng/Không giới hạn tốc độ cao)</li>
+                    </ul>
+                    <p class="mb-4">🌏 Thông tin thêm tại: <a href="https://mobifone.vn" class="text-blue-600 hover:underline" target="_blank">https://mobifone.vn</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hướng dẫn sử dụng cơ bản -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-medium text-gray-900 mb-4"><b>🎯BƯỚC CUỐI: HƯỚNG DẪN SETUP</b></h2>
+            <div class="card rounded-lg p-5">
+                <ol class="list-decimal pl-6 mb-4">
+                    <li>Tải và cài đặt <b>NPV Tunnel</b> từ <b>Appstore</b> hoặc <b>CHPlay</b></li>
+                    <li>👉Sau khi mua gói xong mọi người vào app chọn tab <b>“More”</b> => <b>“Device ID”</b> => copy đoạn ID gửi cho Admin để được cho phép sử dụng trên thiết bị của khách</li>
+                    <li>👉Sau đó Admin sẽ gửi cho 1 mã key => Chọn tab <b>“Configs”</b> => bấm dấu <b>“+”</b> => Chọn <b>“Import cloud config”</b> => Dán key đó vào ô rồi bấm nút <b>“Import cloud config”</b> => Bấm chọn vào máy chủ vừa thêm rồi quay sang tab <b>“Home”</b> bấm kết nối là dùng</li>
+                </ol>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex flex-col items-center">
+                        <img src="IMG_2864.JPG" alt="Kết nối VPN NPV Tunnel" class="guide-img rounded-lg shadow-sm">
+                        <p class="text-center mt-2 text-sm">Ảnh 1: Copy Device ID</p>
+                        </div>
+                    <div class="flex flex-col items-center">
+                        <img src="NPV2.JPG" alt="Kết nối VPN NPV Tunnel" class="guide-img rounded-lg shadow-sm">
+                        <p class="text-center mt-2 text-sm">Ảnh 2: Dán Key</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chặn quảng cáo và mở chặn Zalo (chỉ cho Android) -->
+        <section class="mb-10">
+                <h2 class="text-2xl font-medium text-gray-900 mb-4"><b>🎯CHẶN QUẢNG CÁO TRONG APP VÀ MỞ CHẶN ZALO TRÊN ANDROID</b> </h2>
+            <div class="card rounded-lg p-5">
+                <p class="mb-4"><b>👉NPV Tunnel</b> trên Android chứa quảng cáo, sử dụng các bước sau để chặn quảng cáo và mở chặn Zalo. Nếu sử dụng App SHOPDATA thì không cần DNS vì sẽ gây lỗi kết nối:</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex flex-col items-center">
+                        <img src="IMG_2872.JPG" alt="Tắt Sniffing" class="guide-img rounded-lg shadow-sm">
+                        <p class="text-center mt-2 text-sm">IOS và Android bỏ tích 3 ô như ảnh</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="NPVQC1.JPG" alt="Cài đặt, kết nối khác" class="guide-img rounded-lg shadow-sm">
+                        <p class="text-center mt-2 text-sm">Tùy chon kết nối</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="NPVQC2.JPG" alt="DNS riêng tư" class="guide-img rounded-lg shadow-sm">
+                        <p class="text-center mt-2 text-sm">DNS riêng tư/Cá nhân</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="NPVQC3.JPG" alt="Thủ công và điền như hình" class="guide-img rounded-lg shadow-sm">
+                        <p class="text-center mt-2 text-sm">Thủ công và điền như hình</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function showProvider(provider) {
+            // Hide all provider content
+            document.querySelectorAll('.provider-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            // Show selected provider content
+            document.getElementById(provider).classList.remove('hidden');
+            // Update active button
+            document.querySelectorAll('.provider-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`button[onclick="showProvider('${provider}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
